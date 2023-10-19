@@ -27,7 +27,7 @@ export default function Page() {
         <h2>Movie</h2>
 
       </div>
-      <div className="grid grid-cols-3 gap-3 place-items-center">
+      <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 place-items-center">
         <Card movies={movies.Search} />
       </div>
 

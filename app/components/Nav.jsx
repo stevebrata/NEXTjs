@@ -18,8 +18,8 @@ export default function Nav() {
   }
 
   return (
-    <div className=" w-full flex p-4 justify-between items-center bg-slate-500">
-      <div className="flex gap-2">
+    <div className=" w-full block md:flex p-4 justify-between items-center bg-slate-500">
+      <div className="flex gap-2 justify-center">
         <Link href={'/'} className="text-xl font-bold"> SBMovies
         </Link>
         <div className="bg-white flex justify-between rounded-md relative items-center">
@@ -28,8 +28,8 @@ export default function Nav() {
           <div>🌙</div>
         </div>
       </div>
-      <div className="overflow-hidden p-4">
-        <input value={name} onChange={(e) => setName(e.target.value)} onKeyDown={handleSubmit} className="rounded-md px-4 py-2" placeholder="search"></input>
+      <div className=" p-4">
+        <input value={name} onChange={(e) => setName(e.target.value)} onKeyDown={handleSubmit} className=" block rounded-md px-4 py-2 mx-auto" placeholder="search"></input>
       </div>
     </div >
   )
