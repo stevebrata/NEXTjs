@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import Nav from './components/Nav'
 import './globals.css'
 import ThemeContextProvider from './context/useThemeContext'
+import { Providers } from './providers/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,11 +13,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeContextProvider>
-          <Nav />
-          {children}
+          <Providers>
+            <Nav />
+            {children}
+          </Providers>
         </ThemeContextProvider>
       </body>
     </html>
