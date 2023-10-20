@@ -8,7 +8,7 @@ export default function Page() {
   const [movies, setMovies] = useState([])
 
   const result = async () => {
-    const res = await fetch(`http://www.omdbapi.com/?apikey=dd686db3&s=movie&t=movie&y=2023&page=${page}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}&s=movie&t=movie&y=2023&page=${page}`)
     const data = await res.json()
     setMovies(data)
   }
