@@ -11,7 +11,7 @@ export default function ThemeContextProvider({ children }) {
   const [theme, setTheme] = useState(false)
 
   useEffect(() => {
-    console.log(theme)
+    // console.log("hai")
   }, [theme])
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

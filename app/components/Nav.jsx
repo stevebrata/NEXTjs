@@ -25,9 +25,9 @@ export default function Nav() {
       <div className="flex gap-2 justify-center">
         <Link href={'/'} className="text-xl font-bold" data-hide-on-theme="dark"> SBMovies
         </Link>
-        <div className="bg-white flex justify-between rounded-md relative items-center cursor-pointer" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}  >
+        <div className="bg-white border-[2px] border-gray-800 flex justify-between rounded-md relative items-center cursor-pointer box-mode" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}  >
           <div>🌞</div>
-          <div className="w-[22px] h-[22px] rounded-full bg-orange-500 absolute transition-all duration-500" style={theme === "dark" ? { right: 1 } : { left: 1 }} ></div>
+          <div className="w-[22px] h-[22px] rounded-full bg-orange-500 absolute transition-all duration-500 border-[2px] border-gray-600 button" style={theme === "dark" ? { right: 1 } : { left: 1 }} ></div>
           <div>🌙</div>
         </div>
       </div>

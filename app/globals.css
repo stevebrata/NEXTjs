@@ -8,11 +8,14 @@
   --foreground: black;
 }
 
+[data-theme='dark'] .box-mode {
+
+  background-color: black;
+  border-color: white;
+
+}
+
 [data-theme='dark'] {
   --background: black;
   --foreground: white;
-
-  /* .nav {
-    background: white;
-  } */
 }
