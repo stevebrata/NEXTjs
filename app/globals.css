@@ -19,3 +19,19 @@
   --background: black;
   --foreground: white;
 }
+
+.login_wrap {
+  @apply max-w-sm min-h-[300px] bg-red-600 mx-auto rounded-xl overflow-hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+}
+
+.login_box {
+  @apply w-full h-[300px] backdrop-blur-md bg-white/30
+}
+
+.login_header {
+  @apply p-3 text-center text-2xl font-bold
+}
+
+.login_button {
+  @apply p-4 text-center border-[2px] flex border-black text-white bg-blue-600 rounded-md w-fit mx-auto cursor-pointer
+}
