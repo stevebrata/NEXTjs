@@ -1,5 +1,5 @@
 "use client"
-import Login from "./components/Login"
+
 import { useSession } from "next-auth/react"
 import MovieList from "./components/MovieList"
 import { useEffect } from "react"
@@ -10,14 +10,11 @@ export default function Page() {
   const router = useRouter()
 
   useEffect(() => {
-    router.push('/')
+    status === "authenticated" ? router.push('/') : router.push('/login')
   }, [status])
   return (
-    <>{status === "unauthenticated" ?
-      <Login />
-      :
-      < MovieList />
-    }
-    </>
+
+    < MovieList />
+
   )
 }
