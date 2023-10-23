@@ -10,10 +10,12 @@ export default function Page() {
   const router = useRouter()
 
   return (
-    <>{status === "unauthenticated" ?
+    <>{status === "authenticated" ?
       router.push("/login")
-      : (
-        <MovieList />
+      : (<>
+        router.push("/")
+        < MovieList />
+      </>
       )
     }
     </>
