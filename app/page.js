@@ -11,12 +11,11 @@ export default function Page() {
 
   return (
     <>{status === "unauthenticated" ?
-      router.push("/login")
-      : (<>{
-        router.push("/")}
-        < MovieList />
-      </>
-      )
+      <Login />
+      :
+
+      < MovieList />
+
     }
     </>
   )
