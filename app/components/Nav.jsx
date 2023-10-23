@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 // import { useThemeContext } from "../context/useThemeContext"
 import { useTheme } from 'next-themes'
+import { signIn, signOut, useSession } from "next-auth/react"
 
 
 export default function Nav() {
@@ -11,6 +12,8 @@ export default function Nav() {
   const [name, setName] = useState('')
   // const { theme, setTheme } = useThemeContext()
   const { theme, setTheme } = useTheme()
+  const { data, status } = useSession()
+  console.log(data, status)
   function handleSubmit(e) {
     if (!name) return
     if (e.key == 'Enter') {
@@ -33,6 +36,15 @@ export default function Nav() {
       </div>
       <div className=" p-4">
         <input value={name} onChange={(e) => setName(e.target.value)} onKeyDown={handleSubmit} className=" block rounded-md px-4 py-2 mx-auto" placeholder="search"></input>
+      </div>
+      <div>
+        {status === "unauthenticated" ? (
+
+          <button onClick={() => signIn("google")}>sign in</button>
+        ) : <>
+          <button onClick={signOut}>sign out</button>
+          <p>sign in as {data?.user?.name}</p></>
+        }
       </div>
     </div >
   )

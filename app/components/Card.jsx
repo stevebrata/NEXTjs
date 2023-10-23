@@ -9,7 +9,7 @@ export default function Card({ movies }) {
 
   // because from API should use loader
   const imageLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`
+    return `${src}?w=${width}?q=${quality}`
   }
 
   function handleDetail(id) {
@@ -29,6 +29,7 @@ export default function Card({ movies }) {
                 alt="Picture of the author"
                 width={100}
                 height={100}
+                quality={75}
               />
               <hr />
               <span>{movie.Year}</span><br />
