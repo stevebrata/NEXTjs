@@ -7,11 +7,11 @@ import { useRouter } from "next/navigation"
 
 export default function Page() {
   const { status } = useSession()
-  const router = -useRouter()
+  const router = useRouter()
 
   useEffect(() => {
     router.push('/')
-  }, status)
+  }, [status])
   return (
     <>{status === "unauthenticated" ?
       <Login />
