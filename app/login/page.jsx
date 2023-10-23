@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 
 function page() {
   const { data, status } = useSession()
-  router = useRouter()
+  const router = useRouter()
   if (status === "authenticated")
     router.push('/')
 
