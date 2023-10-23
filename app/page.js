@@ -10,7 +10,7 @@ export default function Page() {
   const router = useRouter()
 
   return (
-    <>{status === "authenticated" ?
+    <>{status === "unauthenticated" ?
       router.push("/login")
       : (<>
         router.push("/")
