@@ -1,7 +1,14 @@
 'use client'
 import { signIn } from "next-auth/react"
+import { useSession } from "next-auth/react"
+import { useRouter } from "next/navigation"
 
 function page() {
+  const { data, status } = useSession()
+  router = useRouter()
+  if (status === "authenticated")
+    router.push('/')
+
   return (
     <div className="container login_wrap">
       <div className="login_box">
