@@ -6,7 +6,7 @@ import MovieList from "./components/MovieList"
 
 export default function Page() {
   const { status } = useSession()
-  a
+
 
   return (
     <>{status === "unauthenticated" ?
