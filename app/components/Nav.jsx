@@ -21,6 +21,10 @@ export default function Nav() {
       setName('')
     }
   }
+  function handleSignOut() {
+    signOut
+    router.push('/login')
+  }
 
   return (
     // <div className={`${theme ? 'dark' : 'light'} w-full block md:flex p-4 justify-between items-center bg-slate-500`}>
@@ -39,7 +43,7 @@ export default function Nav() {
       </div>
       <div>
         {status === "authenticated" && (<>
-          <button onClick={signOut}>sign out</button>
+          <button onClick={handleSignOut}>sign out</button>
           {/* <p>sign in as {data?.user?.name}</p> */}
         </>)
         }
