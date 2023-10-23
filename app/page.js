@@ -8,13 +8,13 @@ import { useRouter } from "next/navigation"
 export default function Page() {
   const { status } = useSession()
   const router = useRouter()
-
-  useEffect(() => {
-    status === "authenticated" ? router.push('/') : router.push('/login')
-  }, [status])
+  if (status === "unauthenticated")
+    router.push('/')
+  // useEffect(() => {
+  //   status === "authenticated" ? router.push('/') : router.push('/login')
+  //   console.log(status)
+  // }, [status])
   return (
-
     < MovieList />
-
   )
 }
