@@ -9,7 +9,7 @@ export default function Page() {
   const { status } = useSession()
   const router = useRouter()
   if (status === "unauthenticated")
-    router.push('/')
+    router.push('/login')
   // useEffect(() => {
   //   status === "authenticated" ? router.push('/') : router.push('/login')
   //   console.log(status)
