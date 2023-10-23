@@ -1,13 +1,12 @@
 "use client"
-
+import Login from "./components/Login"
 import { useSession } from "next-auth/react"
-import { useRouter } from "next/navigation"
 import MovieList from "./components/MovieList"
 
 
 export default function Page() {
   const { status } = useSession()
-  const router = useRouter()
+  a
 
   return (
     <>{status === "unauthenticated" ?
