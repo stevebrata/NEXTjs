@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <>{status === "unauthenticated" ?
       router.push("/login")
-      : (<>
-        router.push("/")
+      : (<>{
+        router.push("/")}
         < MovieList />
       </>
       )
