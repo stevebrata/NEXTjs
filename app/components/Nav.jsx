@@ -38,10 +38,13 @@ export default function Nav() {
         <input value={name} onChange={(e) => setName(e.target.value)} onKeyDown={handleSubmit} className=" block rounded-md px-4 py-2 mx-auto" placeholder="search"></input>
       </div>
       <div>
+        {status === "unauthenticated" ? (
 
-        <button onClick={signOut}>sign out</button>
-        <p>sign in as {data?.user?.name}</p>
-
+          ""
+        ) : <>
+          <button onClick={signOut}>sign out</button>
+          <p>sign in as {data?.user?.name}</p></>
+        }
       </div>
     </div >
   )
