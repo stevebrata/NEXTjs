@@ -7,7 +7,7 @@ function page() {
       <div className="login_box">
         <div className="login_header"> Login
         </div>
-        <button className="login_button" onClick={signIn("google")}>sign in</button>
+        <button className="login_button" onClick={() => signIn("google")}>sign in</button>
       </div>
     </div>
   )
