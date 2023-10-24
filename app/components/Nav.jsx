@@ -21,8 +21,7 @@ export default function Nav() {
       setName('')
     }
   }
-  function handleSignOut() {
-    signOut
+  function handleSignIn() {
     router.push('/login')
   }
 
@@ -42,10 +41,12 @@ export default function Nav() {
         <input value={name} onChange={(e) => setName(e.target.value)} onKeyDown={handleSubmit} className=" block rounded-md px-4 py-2 mx-auto" placeholder="search"></input>
       </div>
       <div>
-        {status === "authenticated" && (<>
-          <button onClick={handleSignOut}>sign out</button>
+        {status === "authenticated" ? (<>
+          <button onClick={SignOut}>sign out</button>
           {/* <p>sign in as {data?.user?.name}</p> */}
-        </>)
+        </>) :
+          <button onClick={handleSignIn}>sign in</button>
+
         }
       </div>
     </div >
