@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function
   () {
   return (
@@ -17,7 +19,13 @@ export default function
               />
               <hr />
               <span>{movie.Year}</span><br />
-              <button className="outline outline-slate-500 px-2 py-1 rounded-md w-fit" onClick={() => handleDetail(movie.imdbID)}>detail</button>
+              <span>{movie.Released}</span><br />
+              <span>{movie.Genre}</span><br />
+              <span>{movie.Actor}</span><br />
+              <span>{movie.Runtime}</span><br />
+              <span>{movie.Award}</span><br />
+              <span>{movie.Director}</span><br />
+              <Link href={'/'}><button className="outline outline-slate-500 px-2 py-1 rounded-md w-fit">Home</button></Link>
             </div>
           </div>
         )

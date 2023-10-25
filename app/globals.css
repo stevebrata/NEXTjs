@@ -21,11 +21,11 @@
 }
 
 .login_wrap {
-  @apply bg-red-600/50 min-w-full min-h-full rounded-xl overflow-hidden absolute z-10 top-0 left-0
+  @apply bg-black min-w-full min-h-full overflow-hidden absolute z-10 top-0 left-0
 }
 
 .login_box {
-  @apply max-w-[200px] min-h-[150px] backdrop-blur-md bg-white/30 relative translate-y-1/2 rounded-xl left-1/2 -translate-x-1/2 md:min-h-[300px] md:max-w-sm
+  @apply absolute min-w-[200px] min-h-[250px] backdrop-blur-md p-5 bg-white/30 top-1/2 -translate-y-1/2 rounded-xl left-1/2 -translate-x-1/2 md:min-h-[300px] md:min-w-[300px]
 }
 
 .login_header {
