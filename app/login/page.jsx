@@ -12,7 +12,7 @@ function page() {
     router.push('/')
 
   return (
-    <div className="container login_wrap">
+    <div className="login_wrap">
       <div className="login_box">
         <div className="login_header"> Login
         </div>
