@@ -2,7 +2,7 @@ import Link from "next/link"
 import Card from "./Card"
 
 async function MovieList() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}&s=movie&t=movie&y=2023&page=1`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}s=movie&t=movie&y=2023&page=1`)
   const movies = await res.json()
   return (
     <>

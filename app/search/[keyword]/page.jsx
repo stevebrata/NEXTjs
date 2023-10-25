@@ -10,7 +10,7 @@ export default function Page({ params }) {
 
 
   const result = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}&s=${decodeMovie}&type=series&page=${page}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}s=${decodeMovie}&type=series&page=${page}`)
     const data = await res.json()
     setMovies(data)
   }
