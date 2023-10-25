@@ -12,7 +12,7 @@ export default function Nav() {
   const [name, setName] = useState('')
   // const { theme, setTheme } = useThemeContext()
   const { theme, setTheme } = useTheme()
-  const { data, status } = useSession()
+  const { status } = useSession()
 
   function handleSubmit(e) {
     if (!name) return

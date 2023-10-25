@@ -1,11 +1,13 @@
 "use client"
 
+import { useSession } from "next-auth/react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 
 
 export default function Card({ movies }) {
   const router = useRouter()
+  const { status } = useSession()
 
   // because from API should use loader
   const imageLoader = ({ src, width, quality }) => {
@@ -33,7 +35,9 @@ export default function Card({ movies }) {
               />
               <hr />
               <span>{movie.Year}</span><br />
-              <button className="outline outline-slate-500 px-2 py-1 rounded-md w-fit" onClick={() => handleDetail(movie.imdbID)}>detail</button>
+              {status === "authenticated" ?
+                <button className="outline outline-slate-500 px-2 py-1 rounded-md w-fit" onClick={() => handleDetail(movie.imdbID)}>detail</button> : null
+              }
             </div>
           </div>
         )
