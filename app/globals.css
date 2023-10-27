@@ -20,6 +20,10 @@
   --foreground: white;
 }
 
+[data-theme='dark'] .box_detail {
+  @apply bg-black/30
+}
+
 .login_wrap {
   @apply bg-black min-w-full min-h-full overflow-hidden absolute z-10 top-0 left-0
 }
