@@ -9,8 +9,10 @@ export default function CardDetail({ movie }) {
   return (
     <>
 
-      <div key={movie.imdbID} className="box_detail bg-white/30 backdrop-blur-md p-3 text-center">
-        <p className="card-header font-bold text-3xl">{movie.Title}</p>
+      <div key={movie.imdbID} className="box_detail bg-white/30 backdrop-blur-md p-3 text-center flex flex-col gap-3">
+        <div>
+          <p className="card-header font-bold text-3xl">{movie.Title}</p>
+        </div>
         <div className="flex flex-col gap-2 items-center md:flex-row">
           <div className="flex-grow flex justify-center">
             <Image
@@ -39,7 +41,9 @@ export default function CardDetail({ movie }) {
             <span>{movie.Director}</span><br />
           </div>
         </div>
-        <Link href={'/'} ><button className="outline px-2 py-1 rounded-md w-fit">Home</button></Link>
+        <div>
+          <Link href={'/'} ><button className="outline px-2 py-1 rounded-md w-fit hover:outline-orange-600 hover:text-orange-600">Home</button></Link>
+        </div>
       </div>
 
     </>

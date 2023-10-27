@@ -42,10 +42,10 @@ export default function Nav() {
       </div>
       <div>
         {status === "authenticated" ? (<>
-          <button onClick={signOut}>sign out</button>
+          <Link href={'/'}><button onClick={signOut} className="hover:text-orange-500">sign out</button></Link>
           {/* <p>sign in as {data?.user?.name}</p> */}
         </>) :
-          <button onClick={handleSignIn}>sign in</button>
+          <button onClick={handleSignIn} className="hover:text-orange-500">sign in</button>
 
         }
       </div>
