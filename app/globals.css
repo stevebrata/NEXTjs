@@ -35,3 +35,7 @@
 .login_button {
   @apply p-4 text-center border-[2px] flex border-black text-white bg-blue-600 rounded-md w-fit mx-auto cursor-pointer
 }
+
+.detail_movie h3 {
+  @apply font-semibold
+}

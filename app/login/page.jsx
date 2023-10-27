@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 
 function page() {
-  const { data, status } = useSession()
+  const { status } = useSession()
   const router = useRouter()
   if (status === "loading")
     return <div>Loading..</div>
@@ -16,7 +16,7 @@ function page() {
       <div className="login_box">
         <div className="login_header"> Login
         </div>
-        <button className="login_button" onClick={() => signIn("google")}>sign in</button>
+        <button className="login_button" onClick={() => signIn("google")}>Google</button>
       </div>
     </div>
   )

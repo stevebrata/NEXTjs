@@ -6,7 +6,7 @@ async function MovieList() {
   const movies = await res.json()
   return (
     <>
-      <div className={`flex justify-between px-4 text-2xl `}>
+      <div className="flex justify-between px-4 text-2xl">
         <h2>Movie</h2>
         <Link href={'/movie'}>More</Link>
       </div >
