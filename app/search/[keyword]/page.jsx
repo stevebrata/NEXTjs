@@ -22,7 +22,7 @@ export default function Page({ params }) {
       top: 0
     })
   }, [page])
-
+  const lastPage = Math.ceil(Number(movies.totalResults) / 10)
   return (
     <>
       <div className="flex justify-between px-4 text-2xl">
@@ -33,7 +33,7 @@ export default function Page({ params }) {
         <Card movies={movies.Search} />
       </div>
 
-      <Pagination page={page} setPage={setPage} movies={movies} />
+      <Pagination page={page} setPage={setPage} movies={movies} lastPage={lastPage} />
     </>
   )
 }

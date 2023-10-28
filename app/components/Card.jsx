@@ -23,7 +23,7 @@ export default function Card({ movies }) {
       {
         movies?.map(movie =>
           <div key={movie.imdbID} className="border border-orange-500 rounded-md mx-auto p-3 my-3 text-center flex flex-col w-[200px] h-[400px] gap-2">
-            <p className="card-header">{movie.Title}</p>
+            <p className="card-header h-[100px]">{movie.Title}</p>
             <div className="flex flex-col gap-2 items-center">
               <Image
                 loader={imageLoader}
