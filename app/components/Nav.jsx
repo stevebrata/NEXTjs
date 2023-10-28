@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 // import { useThemeContext } from "../context/useThemeContext"
 import { useTheme } from 'next-themes'
 import { signOut, useSession } from "next-auth/react"
@@ -33,7 +33,7 @@ export default function Nav() {
         </Link>
         <div className="bg-white border-[2px] border-gray-800 flex justify-between rounded-md relative items-center cursor-pointer box-mode" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}  >
           <div>🌞</div>
-          <div className="w-[22px] h-[22px] rounded-full bg-orange-500 absolute transition-all duration-500 border-[2px] border-gray-600 button" style={theme === "dark" ? { right: 1 } : { left: 1 }} ></div>
+          <div className={`w-[22px] h-[22px] rounded-full bg-orange-500 absolute transition-all duration-500 border-[2px] border-gray-600 button `} ></div>
           <div>🌙</div>
         </div>
       </div>

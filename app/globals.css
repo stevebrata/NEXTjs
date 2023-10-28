@@ -15,6 +15,14 @@
 
 }
 
+[data-theme='light'] .button {
+  @apply left-[1px]
+}
+
+[data-theme='dark'] .button {
+  @apply right-[1px]
+}
+
 [data-theme='dark'] {
   --background: black;
   --foreground: white;
