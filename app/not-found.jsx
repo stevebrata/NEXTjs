@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function not_found() {
+export default function Page() {
   return (
     <div className="text-center p-10">
       <span className="text-xl font-bold">

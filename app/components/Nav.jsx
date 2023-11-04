@@ -15,7 +15,7 @@ export default function Nav() {
   const { status } = useSession()
 
   function handleSubmit(e) {
-    if (!name) return
+    if (!name || name.trim() == "") return
     if (e.key == 'Enter') {
       router.push(`/search/${name}`)
       setName('')
